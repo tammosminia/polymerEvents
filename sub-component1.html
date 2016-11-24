@@ -1,0 +1,42 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="sub-component1">
+
+    <template>
+        <div id="sub-component1" style="background: #f2eda0">
+            sub-component1
+            <button id="button1" on-tap="push1">1</button>
+            <button id="button2">2</button>
+            <button id="button3" on-tap="push3">3</button>
+            <button id="button4" on-tap="push4">4</button>
+        </div>
+    </template>
+
+    <script>
+        Polymer({
+            is: 'sub-component1',
+
+            listeners: {
+                'button2.tap': 'push2'
+            },
+
+            push1: function() {
+                console.log("sub-component1: button 1 pushed. Using the on-tap property");
+            },
+
+            push2: function() {
+                console.log("sub-component1: button 2 pushed. Using a listener");
+            },
+
+            push3: function() {
+                this.fire("push3");
+            },
+
+            push4: function() {
+                this.fire('iron-signal', {name: 'push4', data: null});
+            }
+
+
+        });
+    </script>
+</dom-module>

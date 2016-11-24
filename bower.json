@@ -1,0 +1,14 @@
+{
+  "name": "polymer-events",
+  "version": "0.1.0",
+  "description": "",
+  "main": "polymer-events.html",
+  "homepage": "https://github.com/tammosminia/polymerEvents",
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.7.0",
+    "iron-signals": "PolymerElements/iron-signals#^1.0.3"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.7"
+  }
+}
