@@ -8,7 +8,7 @@
     <template>
         <div id="polymer-events" style="background: #d3f2b0">
             polymer-events
-            <sub-component1 id="subcomponent1"></sub-component1>
+            <sub-component1 id="subcomponent1" on-push3="push3a"></sub-component1>
             <sub-component2 id="subcomponent2"></sub-component2>
         </div>
         <iron-signals on-iron-signal-push4="push4"></iron-signals>
@@ -19,10 +19,14 @@
             is: 'polymer-events',
 
             listeners: {
-                'push3': 'push3'
+                'push3': 'push3b'
             },
 
-            push3: function() {
+            push3a: function() {
+                console.log("polymer-events: button 3 pushed. Using a custom javascript event and the on-push3 property.")
+            },
+
+            push3b: function() {
                 console.log("polymer-events: button 3 pushed. Using a custom javascript event and a listener.")
             },
 
