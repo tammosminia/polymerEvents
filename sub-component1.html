@@ -9,6 +9,7 @@
             <button id="button2">2</button>
             <button id="button3" on-tap="push3">3</button>
             <button id="button4" on-tap="push4">4</button>
+            <button id="button5" on-tap="push5">5</button>
         </div>
     </template>
 
@@ -34,6 +35,11 @@
 
             push4: function() {
                 this.fire('iron-signal', {name: 'push4', data: null});
+            },
+
+            push5: function(event) {
+                event.stopPropagation();
+                console.log("sub-component1: button 5 pushed. This stops the event from bubbling upward.");
             }
 
 

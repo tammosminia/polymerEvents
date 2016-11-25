@@ -11,3 +11,5 @@ $ bower install
 $ polymer serve
 
 open http://localhost:8081/components/polymer-events/
+
+Look at the console logging and push the buttons.
